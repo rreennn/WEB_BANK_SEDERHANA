@@ -11,7 +11,7 @@ export default function Nabung(props) {
             tabungan: tabungan
         }
 
-        router.post(route('ambil', props.auth.user.id), data);
+        router.post(route('get', props.auth.user.id), data);
     }
 
     return (

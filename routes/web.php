@@ -28,13 +28,14 @@ use Inertia\Inertia;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
 Route::middleware('auth')->group(function() {
     Route::get('/tabungan', [HomeController::class, 'tabungan'])->name('tabungan');
     Route::get('/nabung', [HomeController::class, 'store'])->name('store');
     Route::post('/nabung/{id}', [HomeController::class, 'nabung'])->name('nabung');
     Route::get('/ambil', [HomeController::class, 'ambil'])->name('ambil');
-    Route::post('/ambil/{id}', [HomeController::class, 'get'])->name('ambil');
+    Route::post('/ambil/{id}', [HomeController::class, 'get'])->name('get');
 });
 
 Route::get('/dashboard', function () {

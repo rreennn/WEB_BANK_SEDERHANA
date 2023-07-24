@@ -5,7 +5,7 @@ export default function About(props) {
     return (
         <>
             <Navbar auth={props.auth.user}/>
-            <div className="container bg-slate-200 w-auto pb-5 mx-8">
+            <div className="container bg-slate-200  w-full pb-5 px-8">
                 <h2 className="text-2xl text-center pt-5 font-bold">
                     Tentang Kami
                 </h2>
